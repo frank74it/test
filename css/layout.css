@@ -1,0 +1,297 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 9-feb-2015, 15.39.16
+    Author     : Andrea
+*/
+
+* {
+    /* border:1px dotted red!important; */
+}
+/* -------------  GENERALI  -------------- */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding-top:7.5em;
+}
+
+.clear:before,
+.clear:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clear:after {
+    clear: both;
+}
+
+.wrapper {
+    max-width:1000px;
+    margin:0 auto;
+    position:relative;
+    padding:0 1em;
+}
+section#tagline, footer, section#slider, .wrapper { 
+    min-width:800px;
+}
+
+img, input {
+    max-width:100%;
+}
+
+
+/* ------ ELEMENTI DI LAYOUT COMUNI --------- */
+#valori, #gallery, #contenuti,footer {
+    padding: 3em 0;
+}
+
+/* ------------ HEADER ----------- */
+header {
+    padding-bottom:1em;
+    position:fixed;
+    top:0;
+    z-index:1000;
+    height:8em;
+}
+
+
+header #logo {
+    width:25%;
+    float: left;
+    min-width: 243px; /*per non fare andare a capo lo slogan e non far ridimensionare il logo*/
+    position:relative;
+}
+
+header #logo img {
+    width: 100%;
+    padding-bottom:0.1em;
+    
+}
+
+header #logo img[data-logoelement1="spada"] {
+    width:30px;
+    height:30px;
+    position:absolute;
+    top:14px;
+    right:-15px;
+    border:0;
+  
+}
+
+header .slogan {
+    display:block;
+    clear:both;
+    padding-top:0.5em;
+}
+
+header nav {
+    position:absolute;
+    width:75%;
+    bottom:-0.6em;
+    right:0.4em;
+}
+
+header nav ul {
+    position:absolute;
+    right:0;
+    bottom:0;
+}
+
+header nav li {
+    display:inline-block;
+    padding:0.5em 1em;
+    
+}
+
+
+/* ------------ SLIDER ------------- */
+
+/*in comportamento */
+
+/* ------------ TAGLINE ------------ */
+#tagline {
+    padding:1em 0;
+    margin-bottom:1em;
+    min-width: 800px;
+}
+
+
+#tagline p {
+    float:left;
+    width: 60%;
+}
+#tagline form {
+    float:right;
+    width: 40%;
+    text-align: right;
+}
+
+/* ------------ VALORI ------------ */
+
+
+#valori article {
+    float:left;
+    width:28%;
+}
+#valori article:nth-of-type(2) {
+    margin:0 5%;
+}
+
+#valori img {
+    width:22%;
+    float:left;
+    margin-right:1em;
+}
+
+#valori h3, #valori p {
+    margin-left: 28%;
+}
+
+/* ------------- GALLERY -------------------- */
+#gallery figure {
+    width: 18%;
+    float: left;
+    margin-right:9%
+}
+#gallery figure:last-of-type {
+    margin-right:0;
+}
+#gallery img {
+    width:100%;
+    float:left;
+}
+#gallery figure a {
+    position:relative;
+    display:block;
+    float:left;
+    width:100%;
+}
+
+#gallery figure .overlay {
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+}
+/* ------ PARALLAX ---------- */
+section#parallax {
+    height:450px;
+    
+}
+
+
+/* ------ CONTENUTI --------- */
+#contenuti section {
+    float:left;
+    width:50%;
+}
+
+#contenuti .contenuti-col2{ 
+    padding-left:2em;
+}
+
+#contenuti .contenuti-col1 img { 
+    width:35%;
+    float:left;
+    
+}
+
+#contenuti .contenuti-col1 article {
+    width:100%;
+    float:left;
+    margin:1em 0;
+    padding-right:1em;
+   
+} 
+
+/* --------- FOOTER ---------- */
+footer {
+    padding-bottom:0;
+}
+
+footer #pre-footer{
+    padding-bottom:3em;
+}
+
+footer .col-img, footer .col-lista, footer .col-txt {
+    float:left;
+}
+footer .col-img  {
+    width:34%;
+
+}
+footer .col-txt, footer .col-lista{
+    width:28%;
+    margin-right:4%;
+}
+footer .col-img li {
+    width:100%;
+    float:left;
+    margin-bottom:2em;
+}
+footer .col-img img {
+    width:45%;
+    float:left;
+}
+
+footer .col-img p {
+    margin-left:48%;
+}
+
+footer .col-txt {
+    min-height:16.5em;
+}
+
+
+footer .col-lista li {
+    margin-bottom:1em;
+    padding-left:2em;
+   
+    
+}
+
+
+
+
+/*post footer*/
+#post-footer {
+    padding-top:0.5em;
+    padding-bottom:0.5em;
+    
+}
+
+#post-footer p  {
+    width:50%;
+    float:left;
+    padding-top:0.2em;
+    
+}
+#post-footer #social {
+    float:right;
+    width:30%;
+    
+    
+}
+
+#post-footer #social img {
+    
+    float:right;
+    margin-left:0.5em;
+    
+}
+
+/*------- MOBILE --------- */
+
+.mob-menu-ico {
+ display:none; /*nasconde l'icona di attivazione menu in condizioni normali'*/
+   position:absolute;
+        right:0;
+        z-index:1;
+}

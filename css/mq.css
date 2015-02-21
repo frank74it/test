@@ -1,0 +1,204 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 11-feb-2015, 23.05.17
+    Author     : Andrea
+*/
+
+
+@media screen AND (max-width:820px){
+    
+    /*-------- GENERALI ---------*/
+    section#tagline, footer, section#slider, .wrapper {
+        min-width: 0; /*annullamento min width, che continua a funzionare in caso di non supporto delle media queries */
+    }
+    
+    /* ------- HEADER ---------*/
+    header .wrapper {
+        background:none; /* eliminazione del background di testata */
+    }
+    /* ------- MENU ---------- */
+    /*- layout -*/
+    
+    .mob-menu-ico {
+        display:block; /* sotto gli 820 il menu appare: visualizzazione dell'icona menu' */
+    }
+    header nav { 
+        width:30%; /*larghezza della navigazione*/
+        top:25%;   /*spostamento della barra, absolute non viene sovrascritto e permane*/
+        right:3%;
+        bottom: initial;
+    }
+   
+    header nav ul {
+    bottom:initial;
+    display:none; /* menu nascosto e riattivato via jquery al clic sull'icona. */  
+    width:100%;
+    top:0px;
+    z-index:0;
+   
+    }
+     header nav li { /* allineamento verticale dei bottoni */
+    display:block;
+    padding:0.5em 1em;
+    }
+    
+    
+    /* style */
+    header nav li:first-of-type { /*arrotondamento menue*/
+      border-radius: 0 10px 0 0;
+    }
+    header nav li:last-of-type { 
+      border-radius: 0;
+    }
+    header nav li {
+      box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.15);  
+      border-bottom:1px dotted #777;
+    }
+    
+    header nav ul {
+         box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.15);
+         border-radius: 0 10px 0 0;
+    }
+    /* SLIDER */
+    #slider article {
+        top:60%; /* evitare sovrapposizione slogan sui bottoni di navigazione sotto lo slider*/
+    }
+}
+
+@media screen AND (max-width:720px) {
+    
+    #valori article { 
+        float:none;
+        width:100%;
+        margin:0 auto; /*centratura*/
+        
+    }
+    #valori article:nth-last-of-type(2) {
+        margin:4em auto; /*override con specificità piu' alta'*/
+    }
+    
+    footer .col-txt {
+        background:none;
+    }
+     #contenuti .contenuti-col1 img {
+        display:none; /*tolta l'immagine a tendina'*/
+    }
+   
+    
+    @keyframes morte-nera {
+  0% {transform:translate(20px, 30px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-27%, -27%);animation-timing-function: cubic-bezier(.25,.25,.75,.75);}
+  100% {transform:translate(42px, 30px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-27%, -27%);}
+}
+
+}
+
+@media screen AND (max-width:650px) {
+    header nav { 
+        width:40%;
+    }
+    header nav a { 
+       font-size:1.1em;
+       font-weight: 700;
+    }
+    #slider article {
+        top:40%; 
+        left:30%;
+        right:initial;
+       
+    }
+    section#slider h3 {
+        font-size:1.2em;
+    }
+    section#slider p {
+        font-size:1em;
+    }
+    
+    input[type="submit"] {
+        margin-top:1em;
+    }
+    #contenuti section {
+        float:none;
+        width:100%;
+    }
+   
+    #gallery figure { /* ridefinizione spazio per immagini a 2 a 2*/
+        width:40%;
+        margin:5%;
+    }
+    #gallery figure:nth-of-type(3) {
+        clear:left;
+    }
+    
+    section#parallax {
+        display:none;
+    }
+    
+    
+    footer .col-img, footer .col-lista, footer .col-txt {
+        float:none;
+        width:100%;
+        min-height:0;
+        margin-bottom:2em;
+    }
+}
+
+@media screen AND (max-width:480px) {
+    section#slider, header .slogan, section#tagline p {
+        display:none;
+    }
+    header {
+        height: auto;
+        padding-bottom:0;
+    }
+    
+    header #logo img {
+        border-top:0;
+        padding-bottom:0;
+    }
+    body {
+        padding-top:4.8em;
+    }
+    
+    section#tagline form {
+        width:100%;
+        float:none;
+        text-align:center;
+    }
+    
+    section#tagline input {
+        width:65%;
+    }
+    section#tagline input[type="submit"] {
+        width:30%;
+    }
+    
+    header nav {
+        width:60%;
+    }
+    
+    #gallery figure {
+        clear:both;
+        width:100%;
+        margin:2em 0;
+    }
+    
+    
+   
+}
+@media screen AND (max-width:400px) {
+    #contenuti .contenuti-col1 {
+        display:none;
+    }
+    #contenuti .contenuti-col2 {
+        float:none;
+        width:100%;
+        padding-left: 0;
+    }
+    section#tagline, footer, section#slider, .wrapper {
+        min-width: 330px; 
+    }
+}
